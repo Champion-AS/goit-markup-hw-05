@@ -49,6 +49,10 @@ p {
   margin-bottom: 0;
 }
 
+img {
+  display: block;
+}
+
 .logo {
   color: #2196f3;
   font-family: Raleway;
@@ -97,10 +101,6 @@ header ul li a {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
-
-  /* transition-property: background-color;
-  transition-duration: 1000ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 header .site-nav li a {
@@ -116,9 +116,9 @@ header .site-nav li a.current {
 }
 
 header .site-nav li a.current {
-  border-bottom: solid 3px #2196f3;
   position: relative;
-  border-radius: 2px;
+
+  /* border-bottom: 0; */
 }
 
 header .contact-nav li a {
@@ -139,13 +139,16 @@ header .contact-nav li a:focus > .icon-header {
   margin-right: 10px;
 }
 
-header .site-nav li a:hover:after,
-header .site-nav li a:focus:after,
-header .site-nav li a.current:after {
+/* header .site-nav li a:hover:after,
+header .site-nav li a:focus:after, */
+header .site-nav li a.current::after {
+  display: block;
+  border-radius: 2px;
+  width: 100%;
+
   position: absolute;
   bottom: 0;
   left: 0;
-  right: 0;
   height: 4px;
   background-color: #2196f3;
   content: '';
@@ -474,6 +477,7 @@ header .site-nav li a.current:after {
 .project-united {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  overflow: hidden;
 }
 .project a {
   text-decoration: none;
@@ -485,8 +489,29 @@ header .site-nav li a.current:after {
   gap: 30px;
 }
 
-.filters .project li a img {
+.filters .project li a img .app-text {
   display: block;
+}
+.project-app-text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+.app-text {
+  padding: 63px 24px;
+  width: 370px;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  position: absolute;
+  top: 37%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.project-combined:hover .app-text {
+  transform: translateY(0);
 }
 /*END Проэкт ================================*/
 
