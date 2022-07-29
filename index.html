@@ -361,6 +361,21 @@
                         </ul>
                     </div>
                 </div>
+
+                <div class="footer-telegram">
+                    <form name="subscribe">
+                        <p class="title-footer">Подпишитесь на рассылку</p>
+                        <div class="footer-form">
+                            <input class="footer-input" type="email" name="email" placeholder="E-mail">
+                            <button class="footer-btn" type="submit">
+                                Подписаться
+                                <svg class="icon-send" width="24" height="24">
+                                    <use href="./images/symbol-defs.svg#icon-telegram"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </footer>
@@ -399,13 +414,23 @@
                     </svg>
                 </div>
 
-                <textarea name="" id="" cols="30" rows="10" placeholder="Введите текст"></textarea>
+                <div class="form-united">
+                    <label for="mail" class="form-ucer">Комментарий</label>
+                    <textarea name="name" id="" cols="30" rows="10" placeholder="Введите текст"></textarea>
+                </div>
 
-                <input type="checkbox" id="agreement">
-                <label for="agreement">Соглашаюсь с рассылкой и принимаю <span>Условия договора</span> </label>
+                <div class="agreement">
+                    <input class="checkbox-input" type="checkbox" id="agreement">
 
+                    <svg class="checkbox" width="16" height="15">
+                        <use href="./images/symbol-defs.svg#icon-icon-check"></use>
+                    </svg>
 
-                <button type="submit">Отправить</button>
+                    <label for="agreement-text">Соглашаюсь с рассылкой и принимаю <span class="form-link">Условия
+                            договора</span> </label>
+                </div>
+
+                <button class="modal-btn" type="submit">Отправить</button>
             </form>
 
         </div>
