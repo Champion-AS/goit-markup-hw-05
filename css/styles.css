@@ -943,7 +943,7 @@ textarea::placeholder {
   margin-top: 20px;
 }
 
-.checkbox-input {
+.checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
