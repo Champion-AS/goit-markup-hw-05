@@ -900,7 +900,7 @@ form {
 
 .form-icon {
   position: absolute;
-  top: 55%;
+  top: 61%;
   left: 12px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -941,6 +941,49 @@ textarea::placeholder {
   align-items: center;
   margin-bottom: 30px;
   margin-top: 20px;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.checkbox-input:checked+.checkbox {
+  background-image: url(../images/check.svg);
+  background-size: cover;
+}
+
+.checkbox {
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/Vector.svg);
+  background-size: cover;
+  margin-right: 8.4px;
+}
+
+.form-agreement {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.form-link {
+  color: #188CE8;
+  text-decoration: underline;
+}
+
+/* .agreement {
+  display: flex;
+  align-items: center;
+  max-width: 425px;
 }
 
 .checkbox {
@@ -954,9 +997,12 @@ textarea::placeholder {
   clip: rect(0 0 0 0);
 }
 
-.checkbox-input:checked+.checkbox {
-  background-image: url(../images/Vector.svg);
-  background-size: cover;
+.checkbox-input {
+  display: inline-block;
+  width: 15px;
+  height: 16px;
+  border: 2px solid #212121;
+  border-radius: 4px;
 }
 
 .checkbox {
@@ -964,7 +1010,42 @@ textarea::placeholder {
   margin-right: 8px;
 }
 
-.agreement-text {
+.checkbox:checked .checkbox-input {
+  border-color: transparent;
+  background-color: #2196f3;
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+} */
+
+/* .agreement {
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+
+
+.checkbox {
+  background-size: cover;
+  margin-right: 8px;
+} */
+
+/* .agreement-text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -975,7 +1056,7 @@ textarea::placeholder {
 .form-link {
   color: #2196F3;
   text-decoration: underline;
-}
+} */
 
 .modal-btn {
   display: block;
